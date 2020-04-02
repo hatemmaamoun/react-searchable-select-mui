@@ -9,6 +9,7 @@ export interface IKeyValuePair {
 interface IBaseProps {
     label?: string;
     searchFieldPlaceholder?: string;
+    hideRemoveSelection?: boolean;
     removeSelectionText?: string;
     helperText?: string;
     formControlProps?: FormControlProps;
@@ -53,6 +54,15 @@ export declare namespace SearchableSelect {
             };
             "searchFieldPlaceholder": {
                 "defaultValue": null;
+                "description": string;
+                "name": string;
+                "required": boolean;
+                "type": {
+                    "name": string;
+                };
+            };
+            "hideRemoveSelection": {
+                "defaultValue": false;
                 "description": string;
                 "name": string;
                 "required": boolean;

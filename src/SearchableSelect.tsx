@@ -17,6 +17,7 @@ export interface IKeyValuePair {
 interface IBaseProps {
   label?: string;
   searchFieldPlaceholder?: string;
+  hideRemoveSelection?: boolean;
   removeSelectionText?: string;
   helperText?: string;
   formControlProps?: FormControlProps;
@@ -83,6 +84,7 @@ export function SearchableSelect(props: SearchableSelectProps) {
     error,
     searchFieldPlaceholder,
     removeSelectionText,
+    hideRemoveSelection,
     value,
     onChange,
     helperText,
@@ -178,7 +180,7 @@ export function SearchableSelect(props: SearchableSelectProps) {
           searchFieldPlaceholder={searchFieldPlaceholder}
           setQuery={setQuery}
         />
-        <MenuItem>{removeSelectionText || "Remove selection"}</MenuItem>
+        {!hideRemoveSelection && <MenuItem>{removeSelectionText || "Remove selection"}</MenuItem>}
         {renderFilteredOptions()}
       </Select>
       <FormHelperText error={error} {...formHelperTextProps}>
