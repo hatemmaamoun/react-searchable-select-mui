@@ -179,9 +179,8 @@ export function SearchableSelect(props: SearchableSelectProps) {
       })
     });
     return filteredOptions.map((group: IGroupStruct | any, index: any) => (
-      <React.Fragment key={index}>
-        <ListSubheader style={{ background: '#fff' }}>{group.title}</ListSubheader>
-        {
+      [
+        <ListSubheader key={group.title} style={{ background: '#fff' }}>{group.title}</ListSubheader>,
           group.data.map((option: IKeyValuePair | any) => {
             const searchVal = valuePropFn(option).toString();
             return (
@@ -190,8 +189,7 @@ export function SearchableSelect(props: SearchableSelectProps) {
               </MenuItem>
             );
           })
-        }
-      </React.Fragment>
+      ]
     ));
   }
 
