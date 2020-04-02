@@ -2,8 +2,6 @@
 
 A simple custom select component including a searchfield.
 
-Here is a Demo:[https://dccs-it-business-solutions.github.io/react-searchable-select-mui/](https://dccs-it-business-solutions.github.io/react-searchable-select-mui/)
-
 ## Installation
 
 You should install [react-searchable-select-mui with npm or yarn](https://www.npmjs.com/package/@dccs/react-searchable-select-mui):
