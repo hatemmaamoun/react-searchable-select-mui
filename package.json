@@ -1,6 +1,6 @@
 {
   "name": "@hatemmaamoun/react-searchable-select-mui",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "Searchable Select MUI",
   "main": "lib/index.js",
   "scripts": {
