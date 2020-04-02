@@ -98,9 +98,40 @@ const SearchableSelectWrapper4 = () => {
   );
 };
 
+const SearchableSelectWrapper5 = () => {
+  const [value, setValue] = React.useState<unknown>();
+
+  const handleChange = (
+    event: React.ChangeEvent<{ name?: string; value: unknown }>
+  ) => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <SearchableSelect
+      label="Searchable Select"
+      hideRemoveSelection={true}
+      value={value}
+      onChange={handleChange}
+      options={[
+        { name: 1, property: "1" },
+        { name: 2, property: "2" },
+        { name: 3, property: "3" }
+      ]}
+      keyPropFn={(option: any) => option.name}
+      valuePropFn={(option: any) => option.property}
+    />
+  );
+};
+
 storiesOf("Searchable Select", module).add("Examples", () => {
   return (
     <div>
+      <br></br>
+      No remove selection option:
+      <br></br>
+      <SearchableSelectWrapper5 />
+      <br></br>
       Custom Props:
       <br></br>
       <SearchableSelectWrapper />
