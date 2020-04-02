@@ -6,10 +6,15 @@ export interface IKeyValuePair {
     key: any;
     value: string;
 }
+export interface IGroupStruct {
+    title: string;
+    data: any[];
+}
 interface IBaseProps {
     label?: string;
     searchFieldPlaceholder?: string;
     hideRemoveSelection?: boolean;
+    grouped?: boolean;
     removeSelectionText?: string;
     helperText?: string;
     formControlProps?: FormControlProps;
