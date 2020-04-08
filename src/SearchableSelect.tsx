@@ -85,6 +85,8 @@ class SearchFieldWrapper extends React.Component<
 export function SearchableSelect(props: SearchableSelectProps) {
   const [query, setQuery] = React.useState("");
 
+  React.useEffect(() => setQuery(""));
+
   const {
     label,
     error,
